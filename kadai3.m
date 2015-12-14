@@ -5,12 +5,9 @@
 
 clear; % 変数のオールクリア
 
-fileName= uigetfile('*');
-ORG=imread(fileName); % 原画像の入力
-ORG = rgb2gray(ORG); colormap(gray); colorbar;
-imagesc(ORG); axis image; % 画像の表示
-pause; % 一時停止
-
+fileName = uigetfile('*');
+ORG  = imread(fileName); % 原画像の入力
+ORG= rgb2gray(ORG); % カラー画像を白黒濃淡画像へ変換
 imagesc(ORG); colormap(gray); colorbar; % 画像の表示
 pause;
 
@@ -28,3 +25,4 @@ pause;
 
 IMG = ORG > 192;
 imagesc(IMG); colormap(gray); colorbar;
+
