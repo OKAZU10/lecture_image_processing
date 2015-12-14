@@ -1,17 +1,20 @@
-% ‰Û‘è‚R@è‡’lˆ—
-% è‡’l‚ð4ƒpƒ^[ƒ“Ý’è‚µ,è‡’lˆ—‚½‰æ‘œ‚ðŽ¦‚¹D
-% ‰º‹L‚ÍƒTƒ“ƒvƒ‹ƒvƒƒOƒ‰ƒ€‚Å‚ ‚éD
-% ‰Û‘èì¬‚É‚ ‚½‚Á‚Ä‚ÍuLennavˆÈŠO‚Ì‰æ‘œ‚ð—p‚¢‚æD
+% èª²é¡Œï¼“ã€€é–¾å€¤å‡¦ç†
+% é–¾å€¤ã‚’4ãƒ‘ã‚¿ãƒ¼ãƒ³è¨­å®šã—,é–¾å€¤å‡¦ç†ãŸç”»åƒã‚’ç¤ºã›ï¼Ž
+% ä¸‹è¨˜ã¯ã‚µãƒ³ãƒ—ãƒ«ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã§ã‚ã‚‹ï¼Ž
+% èª²é¡Œä½œæˆã«ã‚ãŸã£ã¦ã¯ã€ŒLennaã€ä»¥å¤–ã®ç”»åƒã‚’ç”¨ã„ã‚ˆï¼Ž
 
-clear; % •Ï”‚ÌƒI[ƒ‹ƒNƒŠƒA
+clear; % å¤‰æ•°ã®ã‚ªãƒ¼ãƒ«ã‚¯ãƒªã‚¢
 
-ORG=imread('Lenna.png'); % Œ´‰æ‘œ‚Ì“ü—Í
-ORG= rgb2gray(ORG); % ƒJƒ‰[‰æ‘œ‚ð”’•”Z’W‰æ‘œ‚Ö•ÏŠ·
+fileName= uigetfile('*');
+ORG=imread(fileName); % åŽŸç”»åƒã®å…¥åŠ›
+ORG = rgb2gray(ORG); colormap(gray); colorbar;
+imagesc(ORG); axis image; % ç”»åƒã®è¡¨ç¤º
+pause; % ä¸€æ™‚åœæ­¢
 
-imagesc(ORG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\Ž¦
+imagesc(ORG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
 pause;
 
-IMG = ORG > 64; % ‹P“x’l‚ª64ˆÈã‚Ì‰æ‘f‚ð1C‚»‚Ì‘¼‚ð0‚É•ÏŠ·
+IMG = ORG > 64; % è¼åº¦å€¤ãŒ64ä»¥ä¸Šã®ç”»ç´ ã‚’1ï¼Œãã®ä»–ã‚’0ã«å¤‰æ›
 imagesc(IMG); colormap(gray); colorbar;
 pause;
 
@@ -25,4 +28,3 @@ pause;
 
 IMG = ORG > 192;
 imagesc(IMG); colormap(gray); colorbar;
-
